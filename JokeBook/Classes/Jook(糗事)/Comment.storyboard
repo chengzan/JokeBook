@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rc4-Qo-BOH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Comment View Controller-->
+        <scene sceneID="SPx-k7-nKk">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Rc4-Qo-BOH" customClass="JBCommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pmc-Tm-moz"/>
+                        <viewControllerLayoutGuide type="bottom" id="gHa-DB-x99"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7gr-wP-Rtb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-NJ-yf0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rc4-Qo-BOH" id="afJ-Vn-jex"/>
+                                    <outlet property="delegate" destination="Rc4-Qo-BOH" id="hjT-kz-W2A"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi8-Xu-as1" userLabel="input View">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <subviews>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxO-Vl-KYN" userLabel="分隔 View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="QeP-0Z-aML"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-fb-PQH" userLabel="评论 Button">
+                                        <rect key="frame" x="545" y="15" width="45" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="hYL-aZ-WaN"/>
+                                            <constraint firstAttribute="height" constant="30" id="k3C-jB-jeH"/>
+                                        </constraints>
+                                        <state key="normal" title="评论">
+                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled" title="评论">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="commentClicked:" destination="Rc4-Qo-BOH" eventType="touchUpInside" id="iii-EX-nc0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-180" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-8z-BnS" userLabel="字数 Label">
+                                        <rect key="frame" x="545" y="11" width="45" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="JU0-ep-snu"/>
+                                            <constraint firstAttribute="width" constant="45" id="zox-vh-g0g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9Q-Fm-yvB" userLabel="input TextView" customClass="JBTextView">
+                                        <rect key="frame" x="15" y="10" width="515" height="35"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Rc4-Qo-BOH" id="tIn-IY-5GY"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GxO-Vl-KYN" firstAttribute="top" secondItem="Pi8-Xu-as1" secondAttribute="top" id="3W0-GI-ICR"/>
+                                    <constraint firstAttribute="trailing" secondItem="wcO-fb-PQH" secondAttribute="trailing" constant="10" id="7UT-r4-6cH"/>
+                                    <constraint firstAttribute="bottom" secondItem="wcO-fb-PQH" secondAttribute="bottom" constant="10" id="DYm-UX-VNZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HTy-8z-BnS" secondAttribute="trailing" constant="10" id="JKq-P5-4Dy"/>
+                                    <constraint firstAttribute="bottom" secondItem="n9Q-Fm-yvB" secondAttribute="bottom" constant="10" id="TdF-tS-uaR"/>
+                                    <constraint firstItem="n9Q-Fm-yvB" firstAttribute="leading" secondItem="Pi8-Xu-as1" secondAttribute="leading" constant="15" id="VJ3-QA-i2a"/>
+                                    <constraint firstItem="HTy-8z-BnS" firstAttribute="top" secondItem="GxO-Vl-KYN" secondAttribute="bottom" constant="10" id="Vwg-37-wPC"/>
+                                    <constraint firstItem="n9Q-Fm-yvB" firstAttribute="top" secondItem="GxO-Vl-KYN" secondAttribute="bottom" constant="9" id="Whk-V6-NQD"/>
+                                    <constraint firstItem="GxO-Vl-KYN" firstAttribute="leading" secondItem="Pi8-Xu-as1" secondAttribute="leading" id="eFZ-BQ-LvS"/>
+                                    <constraint firstAttribute="height" constant="55" id="pzJ-m6-Exc"/>
+                                    <constraint firstAttribute="trailing" secondItem="GxO-Vl-KYN" secondAttribute="trailing" id="qmF-zB-Eca"/>
+                                    <constraint firstItem="wcO-fb-PQH" firstAttribute="leading" secondItem="n9Q-Fm-yvB" secondAttribute="trailing" constant="15" id="yOT-4M-RNr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pi8-Xu-as1" secondAttribute="trailing" id="68o-R6-0xH"/>
+                            <constraint firstItem="Ef3-NJ-yf0" firstAttribute="top" secondItem="7gr-wP-Rtb" secondAttribute="top" id="KDK-0J-gHq"/>
+                            <constraint firstItem="gHa-DB-x99" firstAttribute="top" secondItem="Pi8-Xu-as1" secondAttribute="bottom" id="MjC-1a-Ss1"/>
+                            <constraint firstAttribute="trailing" secondItem="Ef3-NJ-yf0" secondAttribute="trailing" id="Z3a-Hb-6xf"/>
+                            <constraint firstItem="Ef3-NJ-yf0" firstAttribute="leading" secondItem="7gr-wP-Rtb" secondAttribute="leading" id="aLo-pa-ehp"/>
+                            <constraint firstItem="Pi8-Xu-as1" firstAttribute="leading" secondItem="7gr-wP-Rtb" secondAttribute="leading" id="ezZ-RP-fSI"/>
+                            <constraint firstItem="gHa-DB-x99" firstAttribute="top" secondItem="Ef3-NJ-yf0" secondAttribute="bottom" id="sC9-LL-j41"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="commentButton" destination="wcO-fb-PQH" id="QDK-Vb-Nx5"/>
+                        <outlet property="countLabel" destination="HTy-8z-BnS" id="o5T-y0-FXG"/>
+                        <outlet property="countLabelHeightCons" destination="JU0-ep-snu" id="4TJ-bn-KaH"/>
+                        <outlet property="inputTextView" destination="n9Q-Fm-yvB" id="CvB-wI-RZs"/>
+                        <outlet property="inputView" destination="Pi8-Xu-as1" id="hwN-aT-owo"/>
+                        <outlet property="inputViewBottomCons" destination="MjC-1a-Ss1" id="IYK-Uc-kAp"/>
+                        <outlet property="inputViewHeightCons" destination="pzJ-m6-Exc" id="Xi1-ya-Of1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHE-4v-MiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="121"/>
+        </scene>
+    </scenes>
+</document>

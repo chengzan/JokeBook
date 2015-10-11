@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JBReplyViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="AhH-gq-ZyG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="27"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commentMoreBackgroundView" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-ph-Qlw" userLabel="背景 commentMoreBackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="124" height="27"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-dN-g8G" userLabel="回复 Button">
+                    <rect key="frame" x="0.0" y="0.0" width="58" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="BEk-1x-KjF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="contentEdgeInsets" minX="-3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="回复" image="comment_reply">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="replyButtonClicked:" destination="-1" eventType="touchUpInside" id="aVW-fM-HrX"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-KN-o4k" userLabel="分隔 View">
+                    <rect key="frame" x="58" y="5" width="1" height="17"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="UNo-KC-9r1"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qa-50-0ca" userLabel="举报 Button">
+                    <rect key="frame" x="59" y="0.0" width="58" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="4R9-fo-oQh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="contentEdgeInsets" minX="-3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="举报" image="comment_report">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vc8-ph-Qlw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ne-4W-JFj"/>
+                <constraint firstAttribute="bottom" secondItem="XcW-KN-o4k" secondAttribute="bottom" constant="5" id="CNo-PJ-TFP"/>
+                <constraint firstItem="0qa-50-0ca" firstAttribute="leading" secondItem="FIc-dN-g8G" secondAttribute="trailing" constant="1" id="Dr6-96-Nlm"/>
+                <constraint firstAttribute="trailing" secondItem="vc8-ph-Qlw" secondAttribute="trailing" id="OXM-bd-fNu"/>
+                <constraint firstItem="0qa-50-0ca" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P5l-d5-RmE"/>
+                <constraint firstAttribute="bottom" secondItem="vc8-ph-Qlw" secondAttribute="bottom" id="PHM-Y8-MzI"/>
+                <constraint firstAttribute="bottom" secondItem="0qa-50-0ca" secondAttribute="bottom" id="Qwu-0E-tLf"/>
+                <constraint firstItem="XcW-KN-o4k" firstAttribute="leading" secondItem="FIc-dN-g8G" secondAttribute="trailing" id="XRv-VK-owo"/>
+                <constraint firstItem="FIc-dN-g8G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a1L-Lo-2xv"/>
+                <constraint firstAttribute="bottom" secondItem="FIc-dN-g8G" secondAttribute="bottom" id="fsQ-ZV-ySp"/>
+                <constraint firstItem="FIc-dN-g8G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kHM-hk-QOd"/>
+                <constraint firstItem="XcW-KN-o4k" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="naS-hC-nly"/>
+                <constraint firstItem="vc8-ph-Qlw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rBM-pc-iS7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-301" y="320.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="commentMoreBackgroundView" width="124" height="27"/>
+        <image name="comment_reply" width="15" height="15"/>
+        <image name="comment_report" width="15" height="15"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

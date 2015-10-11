@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GPh-jp-Yw6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Joke Mart View Controller-->
+        <scene sceneID="AB1-CF-mI5">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="GPh-jp-Yw6" customClass="JBJokeMartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L2s-ag-hHj"/>
+                        <viewControllerLayoutGuide type="bottom" id="J9g-Ub-yeo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fT6-3j-L6V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufr-Db-f4C">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J9g-Ub-yeo" firstAttribute="top" secondItem="Ufr-Db-f4C" secondAttribute="bottom" id="bri-E2-BkJ"/>
+                            <constraint firstItem="Ufr-Db-f4C" firstAttribute="leading" secondItem="fT6-3j-L6V" secondAttribute="leading" id="i3n-zF-LVe"/>
+                            <constraint firstItem="Ufr-Db-f4C" firstAttribute="top" secondItem="fT6-3j-L6V" secondAttribute="top" id="mSg-M2-v55"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufr-Db-f4C" secondAttribute="trailing" id="njf-Ny-5oI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nsr-Cl-H1d"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="webView" destination="Ufr-Db-f4C" id="GJQ-yG-2XK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwa-aI-cfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1415" y="151"/>
+        </scene>
+    </scenes>
+</document>

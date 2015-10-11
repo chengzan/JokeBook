@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cbw-2g-YR9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CNj-MB-Bvb">
+            <objects>
+                <navigationController id="cbw-2g-YR9" customClass="JBNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNX-rC-qhH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VXp-QD-kTn" kind="relationship" relationship="rootViewController" id="Crg-C0-3ZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdS-J5-fd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034" y="1408"/>
+        </scene>
+        <!--Joke View Controller-->
+        <scene sceneID="9St-2X-XsB">
+            <objects>
+                <viewController id="VXp-QD-kTn" customClass="JBJokeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfZ-o5-qJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="7cY-Fb-rTv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VdD-4G-C2f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0X-qy-Nay" userLabel="topView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="MfQ-sX-CJ8"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUh-ug-3GM">
+                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G0X-qy-Nay" firstAttribute="leading" secondItem="VdD-4G-C2f" secondAttribute="leading" id="6rs-hE-UyA"/>
+                            <constraint firstAttribute="trailing" secondItem="G0X-qy-Nay" secondAttribute="trailing" id="UZQ-J3-Hbd"/>
+                            <constraint firstItem="G0X-qy-Nay" firstAttribute="top" secondItem="VdD-4G-C2f" secondAttribute="top" constant="64" id="h83-W5-hPS"/>
+                            <constraint firstItem="NUh-ug-3GM" firstAttribute="leading" secondItem="VdD-4G-C2f" secondAttribute="leading" id="i6D-9P-0Ai"/>
+                            <constraint firstAttribute="trailing" secondItem="NUh-ug-3GM" secondAttribute="trailing" id="n8n-g0-lGz"/>
+                            <constraint firstItem="NUh-ug-3GM" firstAttribute="top" secondItem="G0X-qy-Nay" secondAttribute="bottom" id="ovu-xW-pty"/>
+                            <constraint firstItem="7cY-Fb-rTv" firstAttribute="bottom" secondItem="NUh-ug-3GM" secondAttribute="bottom" id="wvq-Ll-xAY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ak-QH-x0N"/>
+                    <connections>
+                        <outlet property="scrollView" destination="NUh-ug-3GM" id="mHZ-ad-kEB"/>
+                        <outlet property="topView" destination="G0X-qy-Nay" id="R2U-pa-ySL"/>
+                        <outlet property="topViewToTopCons" destination="h83-W5-hPS" id="jC1-X0-gON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDt-k7-Ebf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="1408"/>
+        </scene>
+    </scenes>
+</document>

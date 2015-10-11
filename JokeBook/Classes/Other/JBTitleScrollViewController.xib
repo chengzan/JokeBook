@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JBTitleScrollViewController">
+            <connections>
+                <outlet property="pageControl" destination="sib-2X-we0" id="oic-YX-HPc"/>
+                <outlet property="scrollView" destination="jDk-xF-oKZ" id="yNA-1d-wfq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="112" height="28"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDk-xF-oKZ">
+                    <rect key="frame" x="0.0" y="0.0" width="112" height="28"/>
+                </scrollView>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="sib-2X-we0">
+                    <rect key="frame" x="0.0" y="18" width="112" height="8"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="xQg-RK-cJb"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sib-2X-we0" secondAttribute="trailing" id="53H-RO-jMH"/>
+                <constraint firstItem="jDk-xF-oKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WTn-NL-vXW"/>
+                <constraint firstAttribute="bottom" secondItem="sib-2X-we0" secondAttribute="bottom" constant="2" id="cai-HK-OwM"/>
+                <constraint firstAttribute="bottom" secondItem="jDk-xF-oKZ" secondAttribute="bottom" id="dg1-Fo-RgX"/>
+                <constraint firstAttribute="trailing" secondItem="jDk-xF-oKZ" secondAttribute="trailing" id="gek-fl-Ltu"/>
+                <constraint firstItem="sib-2X-we0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oav-yg-k1v"/>
+                <constraint firstItem="jDk-xF-oKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v3B-1g-CFz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
