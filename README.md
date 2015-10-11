@@ -7,8 +7,9 @@
 ![image](https://raw.githubusercontent.com/chengzan/JokeBook/master/ScreenShots/Snip20151011_2.png)
 
 #Copy糗事百科完全是出于个人的兴趣与爱好，没有其他非分之想，如果你觉得可以就为我Star吧。
+
 #这是项目的目录结构
-![image](https://raw.githubusercontent.com/chengzan/JokeBook/master/ScreenShots/Snip20151011_1.png)
+![image](https://raw.githubusercontent.com/chengzan/JokeBook/master/ScreenShots/Snip20151011_1.jpg)
 
 #**** 效果图 ****
 
